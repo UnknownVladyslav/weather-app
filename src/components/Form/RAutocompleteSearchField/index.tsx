@@ -2,6 +2,7 @@ import { useState, useMemo, useRef, ChangeEvent } from 'react';
 import { Control, Controller } from 'react-hook-form';
 
 import { RLoader } from 'components/RLoader';
+import { ILocation } from 'types';
 import { useOutsideClick } from 'hooks/useOutsideClick';
 import { RListIsEmpty } from 'components/RListIsEmpty';
 import {
@@ -15,8 +16,10 @@ import {
 import { FieldInput, FieldDropdownOption } from './styled';
 
 interface IValue {
+  id: number;
   label: string;
   value: string | number;
+  location: ILocation;
 }
 
 interface AutocompleteSearchFieldProps {
@@ -32,7 +35,7 @@ interface AutocompleteSearchFieldProps {
   loading?: boolean;
   helperTextStatic?: boolean;
   fullWidth?: boolean;
-  onChange: (option: IValue) => void;
+  onChange?: (option: IValue) => void;
   onInput?: (value: string) => void;
 }
 
@@ -43,7 +46,6 @@ function AutocompleteSearchField({
   height = 40,
   amountSymbols = 3,
   options = [],
-  value,
   labelStatic = true,
   error = false,
   loading = false,
@@ -109,8 +111,8 @@ function AutocompleteSearchField({
 
     return options.map((option) => (
       <FieldDropdownOption
-        key={option.value}
-        active={option.value === value.value}
+        key={option.id}
+        active={option.label === label}
         onClick={() => onChooseOption(option)}
       >
         <span>{option.label}</span>

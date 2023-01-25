@@ -22,12 +22,12 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 14px;
       font-weight: 400;
       line-height: 145%;
-      color: ${theme.maastrichtBlue};
-      background-color: #fcfcfc;
+      color: ${theme.white};
+      background-color: ${theme.infinity};
 
       .Toastify__toast-container {
         top: 25px;
@@ -108,7 +108,7 @@ export const GlobalStyles = createGlobalStyle`
     h4,
     h5,
     h6 {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
 
     h1 {

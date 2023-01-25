@@ -17,7 +17,7 @@ import Router from 'router';
 const persist = persistStore(store);
 
 ReactDOM.createRoot(document.getElementById(`root`) as HTMLElement).render(
-  <React.StrictMode>
+  <>
     <Provider store={store}>
       <PersistGate
         loading={null}
@@ -45,5 +45,5 @@ ReactDOM.createRoot(document.getElementById(`root`) as HTMLElement).render(
         theme="light"
       />
     </Provider>
-  </React.StrictMode>
+  </>
 );

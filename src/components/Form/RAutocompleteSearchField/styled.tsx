@@ -18,7 +18,7 @@ const FieldDropdownOption = styled(RootFieldDropdownOption)<{
   justify?: string;
 }>`
   justify-content: ${({ justify = 'space-between' }) => justify};
-  padding: 4px 8px 4px 14px;
+  padding: 8px 8px 8px 14px;
 `;
 
 export { FieldInput, FieldIcons, FieldDropdownOption };

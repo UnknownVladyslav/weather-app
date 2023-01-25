@@ -73,7 +73,7 @@ const LabelStatic = styled.label<{
   line-height: 1;
   color: ${({ error, disabled, theme }) =>
     // eslint-disable-next-line no-nested-ternary
-    disabled ? theme.gainsboro : error ? theme.error : theme.maastrichtBlue};
+    disabled ? theme.gainsboro : error ? theme.error : theme.white};
   transition: 0.1s linear;
 `;
 
@@ -169,8 +169,7 @@ const FieldDropdown = styled.div<{
   height: auto;
   max-height: 166px;
   padding: 6px 0;
-  background-color: ${({ theme }) => theme.white};
-  border: 1px solid ${({ theme }) => theme.gainsboro};
+  background-color: ${({ theme }) => theme.infinity};
   box-shadow: 0 4px 6px 1px rgba(74, 80, 87, 0.13);
   border-radius: 6px;
   overflow-y: auto;
@@ -199,7 +198,7 @@ const RootFieldDropdownOption = styled.div<{
     `}
 
   &:hover {
-    background-color: ${({ theme }) => theme.honeydew};
+    background-color: ${({ theme }) => theme.dynamicBlack};
   }
 `;
 

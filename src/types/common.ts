@@ -3,7 +3,6 @@ import {
   DetailedHTMLProps,
   HTMLAttributes,
   InputHTMLAttributes,
-  ReactNode,
   TextareaHTMLAttributes,
 } from 'react';
 
@@ -17,15 +16,4 @@ type Attributes<T> = T extends HTMLInputElement
 
 type DefaultProps<T> = DetailedHTMLProps<Attributes<T>, T>;
 
-interface IStep {
-  id: number;
-  slug: string;
-  title: string;
-  completed: boolean;
-}
-
-interface IRoleChecker {
-  children: ReactNode;
-}
-
-export type { DefaultProps, IStep, IRoleChecker };
+export type { DefaultProps };

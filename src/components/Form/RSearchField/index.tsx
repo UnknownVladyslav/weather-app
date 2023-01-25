@@ -13,7 +13,7 @@ import { FieldInput, FieldIcons } from './styled';
 interface RSearchFieldProps
   extends Omit<DefaultProps<HTMLInputElement>, 'onChange'> {
   label: string;
-  value: string;
+  value?: string;
   helperText?: string;
   height?: number;
   amountSymbols?: number;

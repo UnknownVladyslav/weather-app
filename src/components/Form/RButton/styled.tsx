@@ -61,22 +61,22 @@ const Button = styled.button<{
       default:
         return css`
           color: ${theme.white};
-          background-color: ${theme.trinidad};
-          border-color: ${theme.trinidad};
+          background-color: ${theme.lucea};
+          border-color: ${theme.lucea};
 
           &:hover {
-            background-color: ${theme.flamePea};
-            border-color: ${theme.flamePea};
+            background-color: ${theme.blueOysterCult};
+            border-color: ${theme.blueOysterCult};
           }
 
           &:focus {
-            background-color: ${theme.grenadier};
-            border-color: ${theme.grenadier};
+            background-color: ${theme.flickeringSea};
+            border-color: ${theme.flickeringSea};
           }
 
           &:active {
-            background-color: ${theme.fire};
-            border-color: ${theme.fire};
+            background-color: ${theme.flickeringSea};
+            border-color: ${theme.flickeringSea};
           }
         `;
     }

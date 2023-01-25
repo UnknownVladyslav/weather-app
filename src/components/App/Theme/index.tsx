@@ -2,6 +2,13 @@ import { ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 export const theme = {
+  lucea: '#7db4e2',
+  bayshore: '#8acee1',
+  flickeringSea: '#5460e6',
+  blueOysterCult: '#5e73e5',
+  dynamicBlack: '#1e1e1e',
+  infinity: '#222831',
+
   primary: '#A5A5A5',
   error: '#e96b6b',
   white: '#ffffff',

@@ -30,7 +30,7 @@ export const RebootStyles = createGlobalStyle`
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    color: #ffffff;
     text-align: left;
     background-color: var(--white);
   }

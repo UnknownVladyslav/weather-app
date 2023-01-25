@@ -9,31 +9,26 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-
-// REDUCERS
-import auth from 'store/auth';
+import general from 'store/general';
 
 const appReducer = combineReducers({
-  auth,
+  general,
 });
 
 type RootState = ReturnType<typeof appReducer>;
 
 const rootReducer = (state: RootState | undefined, action: Action) => {
-  if (
-    action.type === 'auth/logout/fulfilled' ||
-    action.type === 'auth/SET_APP_IS_FAILED'
-  ) {
+  if (action.type === 'auth/SET_APP_IS_FAILED') {
     return appReducer(undefined, action);
   }
   return appReducer(state, action);
 };
 
 const persistConfig = {
-  key: 'project_name',
+  key: 'weather',
   storage,
   blacklist: [],
-  whitelist: [],
+  whitelist: ['general'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

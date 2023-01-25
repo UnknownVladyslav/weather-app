@@ -4,8 +4,6 @@ import { Switch, Route } from 'react-router-dom';
 import { RLoadingOverlay } from 'components/RLoadingOverlay';
 import NotFoundPage from 'pages/General/NotFound';
 
-const UserLayout = lazy(() => import('layouts/UserLayout'));
-const AuthLayout = lazy(() => import('layouts/AuthLayout'));
 const GeneralLayout = lazy(() => import('layouts/GeneralLayout'));
 
 function App() {
@@ -13,16 +11,8 @@ function App() {
     <Suspense fallback={<RLoadingOverlay isVisible />}>
       <Switch>
         <Route
-          path="/user"
-          component={UserLayout}
-        />
-        <Route
-          path="/general"
-          component={GeneralLayout}
-        />
-        <Route
           path="/"
-          component={AuthLayout}
+          component={GeneralLayout}
         />
         <Route component={NotFoundPage} />
       </Switch>

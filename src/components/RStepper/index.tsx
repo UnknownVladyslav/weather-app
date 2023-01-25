@@ -1,6 +1,7 @@
 import { createContext, useCallback, useMemo } from 'react';
 
-import { DefaultProps, IStep } from 'types/common';
+import { IStep } from 'types';
+import { DefaultProps } from 'types/common';
 import { Main, Steps, Step, StepTitle, Icon } from './styled';
 
 export const StepperContext = createContext({});

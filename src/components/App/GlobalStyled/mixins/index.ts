@@ -16,10 +16,17 @@ const Block = ({
   background: ${bg};
 `;
 
-const Flex = ({ align = 'center', justify = 'flex-start' }) => css`
+const Flex = ({
+  direction = 'row',
+  align = 'center',
+  justify = 'flex-start',
+  gap = '0px',
+}) => css`
   display: flex;
+  flex-direction: ${direction};
   align-items: ${align};
   justify-content: ${justify};
+  gap: ${gap};
 `;
 
 const TextEllipsis = ({ width }: { width: string }) => css`

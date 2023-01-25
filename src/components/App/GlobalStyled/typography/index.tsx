@@ -11,7 +11,7 @@ const Typography = styled.div<BlockMixinType & Record<string, string | number>>`
   text-transform: ${({ tt = 'none' }) => tt};
   text-decoration: ${({ td = 'none' }) => td};
   text-align: ${({ ta = 'left' }) => ta};
-  color: ${({ color = 'initial' }) => color};
+  color: ${({ color = '#ffffff' }) => color};
   letter-spacing: ${({ ls = 'inherit' }) => ls};
 `;
 
